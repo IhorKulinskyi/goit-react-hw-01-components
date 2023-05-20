@@ -5,8 +5,9 @@ export const Card = styled.div`
   text-align: center;
 
   border: 0.5px solid lightgrey;
-  width: calc(100% / 4);
+  width: calc(100% / 6);
   border-radius: 4px;
+  margin-bottom: 40px;
 `;
 
 export const Description = styled.div`
