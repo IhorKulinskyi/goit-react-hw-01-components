@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { List, ListItem, Chip } from './FriendsList.styled';
+import { List, ListItem, Chip } from './FriendList.styled';
 
-export const FriendsList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
     <List>
       {friends.map(friend => (
@@ -15,7 +15,7 @@ export const FriendsList = ({ friends }) => {
   );
 };
 
-FriendsList.propTypes = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string.isRequired,

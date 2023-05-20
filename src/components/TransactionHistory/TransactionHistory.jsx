@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Table, TableHead, TableRow, Td } from './TransactionsTable.styled';
+import { Table, TableHead, TableRow, Td } from './TransactionHistory.styled';
 
-export const Transactions = ({ data }) => {
+export const TransactionHistory = ({ data }) => {
   return (
     <Table>
       <thead>
@@ -25,7 +25,7 @@ export const Transactions = ({ data }) => {
   );
 };
 
-Transactions.propTypes = {
+TransactionHistory.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

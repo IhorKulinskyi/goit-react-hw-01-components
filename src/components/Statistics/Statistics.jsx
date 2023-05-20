@@ -1,9 +1,19 @@
 import PropTypes from 'prop-types';
-import { StatsList, Container ,StatsListItem } from 'components/stats/Stats.styled';
-export const Stats = ({ stats }) => {
+import {
+  StatsList,
+  Container,
+  StatsListItem,
+} from 'components/Statistics/Statistics.styled';
+export const Statistics = ({ stats, title }) => {
+  function hasTitlte() {
+    if (!title) {
+      return null;
+    }
+    return <h2>{title}</h2>;
+  }
   return (
     <Container>
-      <h2>Upload stats</h2>
+      {hasTitlte()}
       <StatsList>
         {stats.map(item => (
           <StatsListItem key={item.id}>
@@ -16,7 +26,7 @@ export const Stats = ({ stats }) => {
   );
 };
 
-Stats.propTypes = {
+Statistics.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
