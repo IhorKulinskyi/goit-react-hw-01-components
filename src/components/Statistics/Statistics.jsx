@@ -5,15 +5,9 @@ import {
   StatsListItem,
 } from 'components/Statistics/Statistics.styled';
 export const Statistics = ({ stats, title }) => {
-  function hasTitlte() {
-    if (!title) {
-      return null;
-    }
-    return <h2>{title}</h2>;
-  }
   return (
     <Container>
-      {hasTitlte()}
+      {title && <h2>{title}</h2>}
       <StatsList>
         {stats.map(item => (
           <StatsListItem key={item.id}>
